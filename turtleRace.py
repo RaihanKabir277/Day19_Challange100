@@ -48,13 +48,32 @@ colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 # ---------- we should redundant the lines of code ----------
 
 y_position = [100, 60, 20, -20, -60, -100]
+is_race_on = False
+all_turtle_list = []
+
 for i in range(6):
     timmy = Turtle(shape="turtle")
     timmy.color(colors[i])
     timmy.penup()
     timmy.goto(-220, y_position[i])
+    all_turtle_list.append(timmy)
 
+if user_bet:
+    is_race_on = True
 
+while is_race_on:
+    for turtle in all_turtle_list:
+        if turtle.xcor() > 220:
+            is_race_on = False
+            winig_color = turtle.pencolor()
+            if user_bet == winig_color:
+                print(f"you have won! {winig_color} is the winner")
+            else:
+                print(f"You lost! {winig_color} won the race")
+
+        turtle.forward(random.randint(0, 10))
+        
+    
 
 
 screen.exitonclick()
