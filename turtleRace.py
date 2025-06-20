@@ -11,40 +11,48 @@ colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 # print(colors[0])
 
-riny = Turtle(shape="turtle")
-riny.color(colors[0])
-riny.penup()
-riny.goto(-220, 100)
+# riny = Turtle(shape="turtle")
+# riny.color(colors[0])
+# riny.penup()
+# riny.goto(-220, 100)
 
 
-tiny = Turtle(shape="turtle")
-tiny.color(colors[1])
-tiny.penup()
-tiny.goto(-220, 60)
+# tiny = Turtle(shape="turtle")
+# tiny.color(colors[1])
+# tiny.penup()
+# tiny.goto(-220, 60)
 
 
-rony = Turtle(shape="turtle")
-rony.color(colors[2])
-rony.penup()
-rony.goto(-220, 20)
+# rony = Turtle(shape="turtle")
+# rony.color(colors[2])
+# rony.penup()
+# rony.goto(-220, 20)
 
 
-timmy = Turtle(shape="turtle")
-timmy.color(colors[3])
-timmy.penup()
-timmy.goto(-220, -20)
+# timmy = Turtle(shape="turtle")
+# timmy.color(colors[3])
+# timmy.penup()
+# timmy.goto(-220, -20)
 
-johny = Turtle(shape="turtle")
-johny.color(colors[4])
-johny.penup()
-johny.goto(-220, -60)
+# johny = Turtle(shape="turtle")
+# johny.color(colors[4])
+# johny.penup()
+# johny.goto(-220, -60)
 
 
-mohny = Turtle(shape="turtle")
-mohny.color(colors[5])
-mohny.penup()
-mohny.goto(-220, -100)
+# mohny = Turtle(shape="turtle")
+# mohny.color(colors[5])
+# mohny.penup()
+# mohny.goto(-220, -100)
 
+# ---------- we should redundant the lines of code ----------
+
+y_position = [100, 60, 20, -20, -60, -100]
+for i in range(6):
+    timmy = Turtle(shape="turtle")
+    timmy.color(colors[i])
+    timmy.penup()
+    timmy.goto(-220, y_position[i])
 
 
 
